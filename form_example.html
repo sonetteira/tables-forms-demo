@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <title>Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/pure-md5@latest/lib/index.js"></script>
+    <script src="assets/js/validate.js" defer></script>
+</head>
+
+<body>
+
+    <form action="success.html" method="get" name="exampleForm" id="exampleForm">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="name" placeholder="Leanne Keeley" required><br>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="pw" required><br>
+         
+        <label for="state">State</label>
+        <select id="state" name="state">
+            <option value="">---</option>
+            <option value="NY">New York</option>
+            <option value="CA">California</option>
+        </select><br>
+        
+       <p>Are you happy today?</p>
+        <label for="happyYes">Yes</label>
+        <input type="radio" value="yes" id="happyYes" name="happy"><br>
+        <label for="happyNo">No</label>
+        <input type="radio" value="no" id="happyNo" name="happy"><br>
+
+        <input type="submit" name="submit" value="Submit" onclick="validate()">
+    </form>
+
+    <form>
+        <label for="textExample">Text Input</label>
+        <input type="text" id="textExample" name="textExample"><br>
+        <label for="numberExample">Number Input</label>
+        <input type="number" id="numberExample" name="numberExample"><br>
+        <label for="CBexample">Checkbox Input</label>
+        <input type="checkbox" id="CBexample" name="CBexample"><br>
+        <label for="fileExample">File Input</label>
+        <input type="file" id="fileExample" name="fileExample"><br>
+        <input type="submit" name="submit" value="Submit">
+    </form>
+    <p>Build your own pizza</p>
+    <form id="pizzaOrder" name="pizzaOrder" method="get" action="pizza.html">
+        <fieldset>
+            <legend>Size</legend>
+            <label for="sizeSm">Small</label>
+            <input type="radio" value="small" id="sizeSm" name="size"><br>
+            <label for="sizeMd">Medium</label>
+            <input type="radio" value="med" id="sizeMd" name="size"><br>
+            <label for="sizeLg">Large</label>
+            <input type="radio" value="large" id="sizeLg" name="size">
+        </fieldset>
+        <fieldset>
+            <legend>Toppings</legend>
+            <label for="cheese">Cheese</label>
+            <input type="checkbox" value="cheese" name="toppings" id="cheese">
+            <label for="pesto">Pesto</label>
+            <input type="checkbox" value="pesto" name="toppings" id="pesto">
+            <label for="olives">Olives</label>
+            <input type="checkbox" value="olives" name="toppings" id="olives">
+            <label for="pepperoni">Pepperoni</label>
+            <input type="checkbox" value="pepperoni" name="toppings" id="pepperoni">
+        </fieldset>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

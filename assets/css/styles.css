@@ -1,0 +1,126 @@
+#exampleTable {
+    border: 3px solid rgb(108, 108, 255);
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+#exampleTable td, #exampleTable th {
+    border: 1px solid black;
+    padding: 3px;
+    text-align: left;
+}
+
+#exampleTable thead th, #exampleTable tfoot td {
+    background-color: rgb(164, 164, 255);
+    font-weight: bold;
+}
+
+#exampleTable tr:nth-of-type(even) {
+    background-color: lavender;
+}
+
+/* #exampleTable .money {
+    background-color: green;
+} */
+
+@media screen and (max-width: 350px) {
+    #exampleTable {
+        border: none;
+        width: 100%
+    }
+    
+    #exampleTable td {
+        display: block;
+    }
+
+    #exampleTable thead tr { /*hide headers*/
+        position: absolute;
+        top: -9999px;
+    }
+    
+   #exampleTable td::before {
+        min-width: 80px;
+        display: inline-block;
+        width: 50%;
+    }
+
+    #exampleTable td:nth-of-type(1)::before {content: "Item:"}
+    #exampleTable td:nth-of-type(2)::before {content: "Quantity:"}
+    #exampleTable td:nth-of-type(3)::before {content: "Cost:"}
+    
+    #exampleTable tfoot td:nth-of-type(1) {display: none;}
+    #exampleTable tfoot td:nth-of-type(2)::before {content: "Total:"}
+}
+
+#notATable {
+    display: table;
+    margin: 15px auto;
+}
+
+#notATable .tblRow {
+    display: table-row;
+}
+
+#notATable .tblCell {
+    display: table-cell;
+    border: 1px solid red;
+    padding: 2px;
+}
+
+@media screen and (max-width: 250px) {
+    #notATable .tblCell {
+        display: block;
+    }
+}
+
+form p {
+    text-align: left;
+}
+
+form {
+    margin: 0 auto;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+input {
+    text-align: left;
+}
+
+label::after {
+    content: ":";
+}
+
+fieldset {
+    width: 500px;
+    text-align: left;
+}
+
+input[type=checkbox], input[type=radio], input[type=file]{
+    width: auto;
+}
+
+/*inline labels*/
+label, input, select {
+    display: inline-block;
+    width: 150px;
+    text-align: left;
+    margin: 2px;
+}
+
+/*block labels*/
+/* input, select {
+    display: block;
+    width: 95%;
+    text-align: left;
+}
+
+input[type=checkbox], input[type=radio] {
+    display: inline-block;
+}
+
+br {
+    display: none;
+} 
+*/
+
